@@ -27,33 +27,35 @@ public class Solution {
         int c = 0;
         int i2 = 1;
         int l2 = 1;
-        for (i = 0; i < l-1; i++) {
-            sum[i] = a[i] + a[i+i2];
+        for (i = 0; i < l-l2; i++) {
+            sum[c] = a[i] + a[i+i2];
             c++;
-            i2++;
-            if (i == l-l2) {
+            if (i == l-l2-1) {
                 l2++;
+                int l3 = 0;
                 for (i=0; i < l-l2; i++) {
-                    sum[c] = sum[c-1] + a[i+i2];
+                    sum[c] = a[i];
+                    i2++;
+                    sum[c] = a[i+i2];
+                    i2++;
                     c++;
-                    l2++;
                 }
             }
         }
-        for (i=0; i < a.length; i++) {
-            if (a[i] < 0) {
-                sum[c] = a[i];
-                c++;
-            }
-        }
+        // for (i=0; i < a.length; i++) {
+        //     if (a[i] < 0) {
+        //         sum[c] = a[i];
+        //         c++;
+        //     }
+        // }
         int nsum = 0;
         for (i = 0; i < sum.length; i++) {
-            if (sum[i] < 0) {
-                // System.out.print(sum[i] + "|");
-                nsum ++;  
-            }
+            // if (sum[i] < 0) {
+                System.out.print(sum[i] + "|");
+                // nsum ++;  
+            // }
         }
-        System.out.println(nsum);
+        // System.out.println(nsum);
 
     }
 }
