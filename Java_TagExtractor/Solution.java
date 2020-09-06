@@ -5,16 +5,16 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution{
-    public static void main(String[] args){
-        
-        Scanner in = new Scanner(System.in);
-        int testCases = Integer.parseInt(in.nextLine());
+	public static void main(String[] args){
+		
+		Scanner in = new Scanner(System.in);
+		int testCases = Integer.parseInt(in.nextLine());
         String word = "";
         String nl = "";
         String tag = "";
         String tag1 = "";
-        while(testCases>0){
-            String line = in.nextLine();
+		while(testCases>0){
+			String line = in.nextLine();
             // String target = line.replaceAll("<[^>]*>", "");
             int c = 0;
             int j = 0;
@@ -61,8 +61,8 @@ public class Solution{
                 } 
                 c++;
             }
-            testCases--;
+			testCases--;
             // break;
-        }
-    }
+		}
+	}
 }
